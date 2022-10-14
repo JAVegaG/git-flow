@@ -43,7 +43,7 @@
 
 .menu > a:hover {
     cursor: pointer;
-    background-color: #3456FF;
+    background-color: #ff3434;
     color: #FFFF;
 }
 
@@ -57,4 +57,8 @@
 
 .main > h1 {
     font-size: 20px;
+}
+
+.main > h2 {
+    font-size: 18px;
 }
