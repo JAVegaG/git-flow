@@ -2,7 +2,7 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is deploying to GitHub pages using GitHub Actions 🚀
 
 on:
   push:
