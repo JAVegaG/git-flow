@@ -1,15 +1,14 @@
 
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy static content to QA environment
 
-run-name: ${{ github.actor }} is deploying to GitHub pages using GitHub Actions 🚀
+run-name: ${{ github.actor }} is deploying to QA environment using GitHub Actions 🚀
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
     branches:
-      - main
+      - hot-fix*
+      - release_*
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,15 +21,14 @@ permissions:
 
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: "qa"
   cancel-in-progress: true
 
 jobs:
   # Single deploy job since we're just deploying
   deploy:
-    if: github.event.pull_request.merged == true
     environment:
-      name: github-pages
+      name: qa
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
