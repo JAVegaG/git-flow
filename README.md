@@ -87,3 +87,5 @@ From the template, one can identify the following characteristics of the action:
 * _concurrency_: allows setting a concurrent deployment considering a group of workers to run the pipeline.
 
 * _jobs_: this is the actual configuration of the pipeline, so it needs to know what steps it must do, where it is supposed to run, and how it should handle the deployment. It is common to use existing actions on the workflow, for instance, _actions/checkout@v3_, _actions/configure-pages@v2_, _actions/upload-pages-artifact@v1_, and _actions/deploy-pages@v1_.
+
+However, it is important to mention that for an action to take place and work properly its declaration file must be in the .github/workflows/ directory and be a .yaml file.

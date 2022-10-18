@@ -5,7 +5,9 @@ name: Deploy static content to Pages
 run-name: ${{ github.actor }} is deploying to GitHub pages using GitHub Actions 🚀
 
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - main
     
